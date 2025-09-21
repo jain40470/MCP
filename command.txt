@@ -1,0 +1,49 @@
+# To create a env
+
+python3 -m venv MCP
+
+
+pip3 install ipykernel
+python3 -m ipykernel install --user --name=MCP --display-name "Python (MCP)"
+
+
+# To install dependenices
+
+pip3 install -r requirements.txt
+
+# For fastapi Backend
+
+pip3 install fastapi
+pip3 install uvicorn
+
+uvicorn main:app --reload
+
+# Git
+
+git remote add origin https://github.com/jain40470/MCP.git
+git status
+git add .
+git commit -m "message"
+git push origin main
+
+# To delete a env
+
+rm -rf env
+
+
+# For Frontend React
+
+npm create vite@latest Frontend -- --template react
+cd Frontend
+
+npm install
+
+npm install tailwindcss @tailwindcss/vite
+
+npm run dev
+
+
+
+
+# develop a login based system , in which chat is saved to db and serving multiple agents 
+# including rag too.
